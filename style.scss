@@ -1,0 +1,88 @@
+html, *{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Jost', sans-serif;
+    text-transform: uppercase;
+}
+
+.labels{
+    width: 77mm;
+    height: 286mm;
+    border: 1px solid #CCC;
+    //margin: 6rem auto;
+    position: relative;
+    display: grid;
+    grid-template-rows: repeat(10, 1fr);
+    gap: 9px;
+    padding-top: 69px;
+    padding-bottom: 58px;
+    
+    img{
+        max-width: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 1;
+    }
+
+    .label{
+        position: relative;
+        z-index: 2;
+        padding: 5px 3px;
+        padding-top: 6px;
+        letter-spacing: -0.025em;
+        
+        .inner{
+            width: 100%;
+            opacity: 1;
+            //background: green;
+            text-align: center;
+            display: grid;
+            grid-template-rows: 1fr 1.25fr 1fr;         
+            
+            > div{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+
+        .top{
+            font-weight: 800;
+        }
+
+        .artist{
+            font-size: 0.775em;
+            padding-top: 3px;
+
+            span{
+                display: inline-block;
+
+                &::before,
+                &::after{
+                    content: "\2605";
+                    font-size: 0.8em;
+                    position: relative;
+                    top: -0.2em;
+                    //display: none;
+                }
+
+                &::before{
+                    left: -0.4em;
+                }
+
+                &::after{
+                    right: -0.4em;
+                }                
+
+            }
+
+        }
+
+        .bottom{
+            font-weight: 800;
+            //padding-top: 1px;
+        }
+    }
+}
